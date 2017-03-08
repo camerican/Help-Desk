@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Google Maps Directions Sample</title>
+	<link rel="stylesheet" href="default.css" />
+</head>
+<body>
+	<h1>Google Maps Directions</h1>
+	<form id="search">
+		<div class="field_set">
+			<label for="origin">Origin</label>
+			<input id="origin" name="origin" value="Hoboken, NJ" />
+		</div>
+		<div class="field_set">
+			<label for="destination">Destination</label>
+			<input id="destination" name="destination" value="Brooklyn, NY" />
+		</div>
+		<div class="field_set">
+			<label for="mode">Mode</label>
+			<select id="mode" name="mode">
+				<option value="DRIVING">Driving</option>
+				<option value="WALKING">Walking</option>
+				<option value="TRANSIT">Transit</option>
+				<option value="BICYCLING">Biking</option>
+			</select>
+		</div>
+		<div class="field_set">
+			<input type="submit" value="Search" />
+		</div>
+	</form>
+	<div id="map"></div>
+	<script src="https://maps.googleapis.com/maps/api/js?key=YOURAPIKEYHERE"></script>
+  <script src="main.js"></script>
+</body>
+</html>

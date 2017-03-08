@@ -16,3 +16,7 @@ As we continue our projects, we'll encounter issues with the gems and APIs we're
 - The Cocktail DB (Hak & Ber)
 - Twitch (Nick & Mauricio)
 - isbndb.com (Alfe)
+
+## Demos
+
+- (Google Map API with Directions)[./demos/]
