@@ -19,4 +19,4 @@ As we continue our projects, we'll encounter issues with the gems and APIs we're
 
 ## Demos
 
-- (Google Map API with Directions)[./demos/]
+- [Google Map API with Directions](./demos/google_map_directions/)

@@ -2,7 +2,7 @@
 
 This is a demonstration of the Google Maps API for providing directions between two points.  We have inputs for an origin, destination, and mode of transport which we pass along to the API to render a map.
 
-![](../assets/google_map_directions.png)
+![](../../assets/google_map_directions.png)
 
 ## Getting Started
 
