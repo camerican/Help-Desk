@@ -1,0 +1,33 @@
+body {
+	text-align: center;
+}
+
+.bg-one::after {
+	background-image: url(https://i.stack.imgur.com/xvuCF.jpg);
+}
+.bg-two::after {
+	background-image: url(https://cdn.vectorstock.com/i/composite/57,83/sunburst-background-vector-775783.jpg)
+}
+.item {
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	font-size: 20px;
+	line-height: 200px;
+	vertical-align: middle;
+	padding: 20px;
+	cursor: pointer;
+	position: relative;
+}
+.item::after {
+	content: '';
+	position: absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	z-index: -1;
+}
+.item:hover::after {
+	opacity: 0.5;
+}
