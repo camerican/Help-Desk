@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Stock Charts</title>
+	<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+	<link rel="stylesheet" type="text/css" href="/default.css" />
+</head>
+<body>
+	<h1>Stock Charts</h1>
+	<form method="get">
+	<input name="s" type="text" value="<%= @stock %>" placeholder="Stock Symbol" />
+	<input type="submit" value="Search" />
+	</form>
+	<div id="chartdiv"></div>
+	<% if @stock %>
+	<script src="//www.amcharts.com/lib/3/amcharts.js"></script>
+	<script src="//www.amcharts.com/lib/3/serial.js"></script>
+	<script src="//www.amcharts.com/lib/3/amstock.js"></script>
+	<script src="//www.amcharts.com/lib/3/plugins/dataloader/dataloader.min.js"></script>
+	<script src="//www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+	<script src="//www.amcharts.com/lib/3/themes/light.js"></script>
+	<script>
+var chart = AmCharts.makeChart( "chartdiv", {
+  "type": "stock",
+  "theme": "light",
+
+  "dataSets": [ {
+    "title": "<%= @stock %>",
+    "fieldMappings": [ {
+      "fromField": "Open",
+      "toField": "open"
+    }, {
+      "fromField": "High",
+      "toField": "high"
+    }, {
+      "fromField": "Low",
+      "toField": "low"
+    }, {
+      "fromField": "Close",
+      "toField": "close"
+    }, {
+      "fromField": "Volume",
+      "toField": "volume"
+    } ],
+    "compared": false,
+    "categoryField": "Date",
+
+    /**
+     * data loader for data set data
+     */
+    "dataLoader": {
+      "url": "/stock/<%= @stock %>",
+      "format": "csv",
+      "showCurtain": true,
+      "showErrors": true,
+      "async": true,
+      "reverse": true,
+      "delimiter": ",",
+      "useColumnNames": true
+    },
+
+  } ],
+  "dataDateFormat": "YYYY-MM-DD",
+
+  "panels": [ {
+      "title": "Value",
+      "percentHeight": 70,
+
+      "stockGraphs": [ {
+        "type": "candlestick",
+        "id": "g1",
+        "openField": "open",
+        "closeField": "close",
+        "highField": "high",
+        "lowField": "low",
+        "valueField": "close",
+        "lineColor": "#fff",
+        "fillColors": "#fff",
+        "negativeLineColor": "#db4c3c",
+        "negativeFillColors": "#db4c3c",
+        "fillAlphas": 1,
+        "comparedGraphLineThickness": 2,
+        "columnWidth": 0.7,
+        "useDataSetColors": false,
+        "comparable": true,
+        "compareField": "close",
+        "showBalloon": false,
+        "proCandlesticks": true
+      } ],
+      "stockLegend": {
+        "valueTextRegular": undefined,
+        "periodValueTextComparing": "[[percents.value.close]]%"
+      }
+    },
+  ],
+} );
+	</script>
+<% end %>
+</body>
+</html>
