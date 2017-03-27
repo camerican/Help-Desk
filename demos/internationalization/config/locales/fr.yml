@@ -1,0 +1,11 @@
+fr:
+  title: "Pierre Feuille Ciseaux"
+  rock: "Pierre"
+  paper: "Feuille"
+  scissors: "Ciseaux"
+  win: Vous gagnez!
+  loss: Vous perdez!
+  draw: Un match nul.
+  home: 
+    index:
+      body: "Bienvenue à Pierre Feuille Ciseaux.  Choisiez-vous Pierre, Feuille, où Ciseaux s'il vous plaît.  Garder en tete que la pierre bat le ciseaux, le ciseaux bat la feuille, et la feuille bat la pierre."

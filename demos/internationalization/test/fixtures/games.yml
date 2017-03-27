@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  threw: 1
+  against: 1
+  result: 1
+
+two:
+  user: two
+  threw: 1
+  against: 1
+  result: 1

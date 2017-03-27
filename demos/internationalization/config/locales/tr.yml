@@ -1,0 +1,11 @@
+tr: 
+  title: "Taş Makas Kağıt"
+  rock: "Taş"
+  paper: "Makas"
+  scissors: "Kağıt"  
+  win: Sen kazandın!
+  loss: Sen kaybettin!
+  draw: maç berabere bitti
+  home: 
+    index:
+      body: "Kaya-kağıt-makas hoş geldiniz. Makas levha ve sac kaya atım atıyor, taş makas atıyor unutmayın."

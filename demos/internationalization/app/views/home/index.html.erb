@@ -1,0 +1,18 @@
+<%= content_tag :h1, t(:title) %>
+
+<%= content_tag :p, t('.body') %>
+
+<div id="stage">
+<%= link_to "/#{I18n.locale}/rock", remote: true do 
+	content_tag :i, nil, class: 'fa fa-hand-rock-o'
+end %>
+
+<%= link_to "/#{I18n.locale}/paper", remote: true do 
+	content_tag :i, nil, class: 'fa fa-hand-paper-o'
+end %>
+
+<%= link_to "/#{I18n.locale}/scissors", remote: true do 
+	content_tag :i, nil, class: 'fa fa-hand-scissors-o'
+end %>
+</div>
+<div id="result"></div>

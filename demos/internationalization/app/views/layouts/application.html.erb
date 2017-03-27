@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Internationalization</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+  <nav>
+  <%= link_to url_for( :locale => 'en' ) do
+  	flag_icon( :us )
+  end %>
+  <%= link_to url_for( :locale => 'fr' ) do
+  	flag_icon( :fr )
+  end %>
+  <%= link_to url_for( :locale => 'tr' ) do
+  	flag_icon( :tr )
+  end %>
+  </nav>
+  <%= content_tag :p, flash[:notice] %>
+  <%= content_tag :p, flash[:alert] %>
+    <%= yield %>
+  </body>
+</html>
