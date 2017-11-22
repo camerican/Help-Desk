@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Cocktail Search</title>
+</head>
+<body>
+	<form method="POST">
+		<input name="ingredient" />
+		<input type="submit" value="Search" />
+	</form>
+	<% if @results %>
+		<table>
+			<tr>
+				<th colspan="2">Drink</th>
+			</tr>
+			<% @results.each do |drink| %>
+				<tr>
+					<td><img width="40px" src="<%= drink["strDrinkThumb"] %>" /></td>
+					<td><%= drink["strDrink"] %></td>
+				</tr>
+			<% end %>
+		</table>
+	<% end %>
+</body>
+</html>
